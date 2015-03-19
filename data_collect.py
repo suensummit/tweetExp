@@ -1,14 +1,14 @@
-__author__ = 'kimi&summit'
+__author__ = 'kimi, modified by summit'
 
 from twitter import *
 import time
 import dateutil.parser
 from elasticsearch import Elasticsearch
 
-CONSUMER_KEY = ""
-CONSUMER_SECRET = ""
-ACCESS_KEY = ""
-ACCESS_SECRET = ""
+CONSUMER_KEY = "rLsrAkuJSETe77RqicDtTQnzc"
+CONSUMER_SECRET = " xjWfVkVPE3xHyOD8lCwJ8nC8U54agdysZ6OjkZoZEcccwBuGOk"
+ACCESS_KEY = " 591945759-SukrTbnnMR5Sd5ajd0GPmd19gkAGRPgAsM84qrEr"
+ACCESS_SECRET = " KZ2BUKaasLB4WFxJl9xq1XaiZbaNevPSGXMe05KilXHXj"
 
 es = Elasticsearch("104.236.193.82:9200")
 
@@ -19,7 +19,7 @@ stream = TwitterStream(auth = auth, secure = True)
 # iterate over tweets matching this filter text
 # IMPORTANT! this is not quite the same as a standard twitter search
 #  - see https://dev.twitter.com/docs/streaming-api
-tweet_iter = stream.statuses.filter(track = "oil")
+tweet_iter = stream.statuses.filter(track = "baseball mlb")
 
 for tweet in tweet_iter:
     # check whether this is a valid tweet
