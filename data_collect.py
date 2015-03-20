@@ -19,7 +19,7 @@ stream = TwitterStream(auth = auth, secure = True)
 # iterate over tweets matching this filter text
 # IMPORTANT! this is not quite the same as a standard twitter search
 #  - see https://dev.twitter.com/docs/streaming-api
-tweet_iter = stream.statuses.filter(track = "baseball mlb")
+tweet_iter = stream.statuses.filter(track = "baseball, mlb")
 
 for tweet in tweet_iter:
     # check whether this is a valid tweet
