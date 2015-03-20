@@ -25,11 +25,11 @@ for tweet in tweet_iter:
     # check whether this is a valid tweet
     if tweet.get('text'):
         # yes it is! print out the contents, and any URLs found inside
-        print "(%s) @%s %s" % (tweet["created_at"], tweet["user"]["screen_name"], tweet["text"])
+        #print "(%s) @%s %s" % (tweet["created_at"], tweet["user"]["screen_name"], tweet["text"])
         ts = time.strftime('%Y-%m-%d %H:%M:%S', time.strptime(tweet['created_at'],'%a %b %d %H:%M:%S +0000 %Y'))
         ts = dateutil.parser.parse(ts)
         ts = ts.isoformat()
-        print(ts)
+        #print(ts)
 
         res = es.index(
             index="twi-mlb", doc_type=ts, id=ts, body={
