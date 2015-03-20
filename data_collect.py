@@ -6,9 +6,9 @@ import dateutil.parser
 from elasticsearch import Elasticsearch
 
 CONSUMER_KEY = "rLsrAkuJSETe77RqicDtTQnzc"
-CONSUMER_SECRET = " xjWfVkVPE3xHyOD8lCwJ8nC8U54agdysZ6OjkZoZEcccwBuGOk"
-ACCESS_KEY = "591945759-SukrTbnnMR5Sd5ajd0GPmd19gkAGRPgAsM84qrEr"
-ACCESS_SECRET = "KZ2BUKaasLB4WFxJl9xq1XaiZbaNevPSGXMe05KilXHXj"
+CONSUMER_SECRET = "xjWfVkVPE3xHyOD8lCwJ8nC8U54agdysZ6OjkZoZEcccwBuGOk"
+ACCESS_KEY = "591945759-ri4RI0WvGEw24dIkSzqkrcSF8QuQxWCKd5sgjuPC"
+ACCESS_SECRET = "NfuvaK8ADtRUfkyeS44Y5gTOQZe8Mld41legYlp6O0wlO"
 
 es = Elasticsearch("104.236.193.82:9200")
 
