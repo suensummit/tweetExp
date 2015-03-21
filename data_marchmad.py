@@ -7,22 +7,27 @@ import dateutil.parser
 from elasticsearch import Elasticsearch
 
 # api
-response = json.load(urllib.urlopen("http://marchmadness.kimonolabs.com/api/players?apikey=Pbkz9h0O3z7LnZ8QD8njaGzRsS63ZaEf"))
+# response = json.load(urllib.urlopen("http://marchmadness.kimonolabs.com/api/players?apikey=Pbkz9h0O3z7LnZ8QD8njaGzRsS63ZaEf"))
 # response = json.load(urllib.urlopen("http://marchmadness.kimonolabs.com/api/teams?apikey=Pbkz9h0O3z7LnZ8QD8njaGzRsS63ZaEf"))
 # response = json.load(urllib.urlopen("http://marchmadness.kimonolabs.com/api/conferences?apikey=Pbkz9h0O3z7LnZ8QD8njaGzRsS63ZaEf"))
 # response = json.load(urllib.urlopen("http://marchmadness.kimonolabs.com/api/games?apikey=Pbkz9h0O3z7LnZ8QD8njaGzRsS63ZaEf"))
 # response = json.load(urllib.urlopen("http://marchmadness.kimonolabs.com/api/team_game_stats?apikey=Pbkz9h0O3z7LnZ8QD8njaGzRsS63ZaEf"))
-# response = json.load(urllib.urlopen("http://marchmadness.kimonolabs.com/api/player_game_stats?apikey=Pbkz9h0O3z7LnZ8QD8njaGzRsS63ZaEf"))
+response = json.load(urllib.urlopen("http://marchmadness.kimonolabs.com/api/player_game_stats?apikey=Pbkz9h0O3z7LnZ8QD8njaGzRsS63ZaEf"))
 # set host
 ES_HOST = {"host" : "104.236.193.82", "port" : 9200}
 # set index
-INDEX_NAME = 'march-mad'
-TYPE_NAME = 'Player'
+# INDEX_NAME = 'march-mad-player'
+# INDEX_NAME = 'march-mad-team'
+# INDEX_NAME = 'march-mad-conference'
+# INDEX_NAME = 'march-mad-game'
+# INDEX_NAME = 'march-mad-teamgamestat'
+INDEX_NAME = 'march-mad-playergamestat'
+# TYPE_NAME = 'Player'
 # TYPE_NAME = 'Team'
 # TYPE_NAME = 'Conference'
 # TYPE_NAME = 'Game'
 # TYPE_NAME = 'TeamGameStat'
-# TYPE_NAME = 'PlayerGameStat'
+TYPE_NAME = 'PlayerGameStat'
 ID_FIELD = 'id'
 # create ES client, create index
 es = Elasticsearch(hosts = [ES_HOST])
