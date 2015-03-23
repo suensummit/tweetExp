@@ -10,7 +10,8 @@ CONSUMER_SECRET = "xjWfVkVPE3xHyOD8lCwJ8nC8U54agdysZ6OjkZoZEcccwBuGOk"
 ACCESS_KEY = "591945759-ri4RI0WvGEw24dIkSzqkrcSF8QuQxWCKd5sgjuPC"
 ACCESS_SECRET = "NfuvaK8ADtRUfkyeS44Y5gTOQZe8Mld41legYlp6O0wlO"
 
-es = Elasticsearch("104.236.193.82:9200")
+# es = Elasticsearch("104.236.193.82:9200")
+es = Elasticsearch("106.185.45.145:9200")
 
 # create twitter API object
 auth = OAuth(ACCESS_KEY, ACCESS_SECRET, CONSUMER_KEY, CONSUMER_SECRET)
