@@ -33,7 +33,7 @@ for tweet in tweet_iter:
         #print(ts)
 
         res = es.index(
-            index="twi-mlb", doc_type=ts, id=ts, body={
+            index="twi-earthquake", doc_type=ts, id=ts, body={
                 'timestamp':ts,
                 'text':tweet["text"]
             })
