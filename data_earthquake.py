@@ -31,9 +31,9 @@ for tweet in tweet_iter:
         res = es.index(
             index="twi-earthquake", doc_type=ts, id=ts, body={
                 'timestamp':ts,
-                'text':tweet["text"]
-                'place':tweet["place"]
-                'coord':tweet["coordinates"]
+                'text':tweet["text"],
+                'place':tweet["place"],
+                'coord':tweet["coordinates"],
                 'source':tweet["source"]
             })
 
